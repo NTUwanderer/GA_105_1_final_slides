@@ -20,6 +20,8 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+		<link rel="stylesheet" href="css/mycss.css">
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -66,18 +68,80 @@
 						<h2>DSMGA2</h2>
 					</section>
 					<section>
-						
+						<h3>Pairwise Detection</h3>
+						<ul>
+							<li>Linkage information</li>
+							<li>Incremental linkage set</li>
+						</ul>
 					</section>
-					
+					<section>
+						<h3>Restricted Mixing</h3>
+						<ul>
+							<li>Check genes exist in chromosomes</li>
+							<li>Flip bits with genes</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Back Mixing</h3>
+						<ul>
+							<li>Cover other chromosomes with mask</li>
+							<li>Shrink the plateaus and basins</li>
+						</ul>
+					</section>				
 				</section>
 				<section>
 					<section>
-						<h2>DSMGA2 in P3 structure</h2>
+						<h2>DSMGA2 in Pyramid structure</h2>
 					</section>
 					<section>
-						
+						<h2>Goal</h2>
+						<ul>
+							<li>Preserve gene diversity in low layers</li>
+							<li>Separate chromosomes by different times of improvement</li>
+						</ul>
 					</section>
-					
+					<section>
+						<h2>Structure</h2>
+						<ul>
+							<li>Every layer is a DSMGA2</li>
+							<li>Chromosomes updated to the upper layer</li>
+							<li>When stop improving, add chromosomes in the first layer</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>First trial:</h3>
+						<p>Use P3 structure and reconstruct each layer to DSMGA2</p>
+					</section>
+					<section>
+						<h3>Tsan</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Second trial:</h3>
+						<p>Build multiple layers with DSMGA2</p>
+					</section>
+					<section>
+						<h2>Difficulties</h2>
+						<ul>
+							<li>Population size may grow: dynamic array to vector</li>
+							<li>Errors when maintaining uplinks</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Performance gets worse</h2>
+						<p style="margin-left: 100px; width: 100px;">Reasons</p>
+						<ul>
+							<li>Terminate conditions should be modified</li>
+							<li>Total population size too large</li>
+							<li>Spend too much time in low layers</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>End</h2>
 				</section>
 			</div>
 		</div>
